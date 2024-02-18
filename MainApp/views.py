@@ -32,6 +32,10 @@ def home(request):
 
 def about(request):
     result = f"""
+    <header>
+    /<a href="/">Home</a> / <a href="/items">Items</a> / <a href="/about"> About</a>
+    </header>
+    
     Имя: <b>{author['Имя']}</b><br>
     Отчество: <b>{author['Отчество']}</b><br>
     Фамилия: <b>{author['Фамилия']}</b><br>
