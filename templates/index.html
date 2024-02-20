@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Start page</title>
-</head>
-<body>
-    <header>
-        /<a href="/">Home</a> / <a href="/items">Items</a> / <a href="/about"> About</a>
-    </header>
-    <h1>Приветствую!</h1>
+{% extends 'base.html' %}
 
-    Меня зовут: <i>{{ name }}.</i><br>
+{% load static %}
+
+{% block content %}
+
+{% include 'inc-menu.html' %}
+<img width="50px" src="{% static 'Juventus.jpg' %}" alt="My image">
+    <h1 class="demo">Приветствую!</h1>
+
+    <span style='color: blue'>Меня зовут: {{ name }}.</span><br>
     Мой email для связи: <i>{{ email }}</i><br>
 
 
     Это главная страница сайта.<br>
     <i> Сайт пока в разработке... </i>
     
-</body>
-</html>
+{% endblock %}
